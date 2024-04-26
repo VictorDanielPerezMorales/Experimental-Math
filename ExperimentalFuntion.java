@@ -3,7 +3,8 @@ public class ExperimentalFuntion {
     public static void main(String[] args) {
         Scanner input = new Scanner (System.in);
         System.out.println("Please, enter the value of x to begin");
-        int result = restFactorial(x)
+        int xValue = input.nextInt();
+        int result = restFactorial(xValue)
         System.out.println("Funtion's result is"+ result);
 public static int restFactorial(int x) {
     // Calculate the x's factorial
