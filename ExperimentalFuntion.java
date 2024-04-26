@@ -3,16 +3,29 @@ import java.util.Scanner;
 public class ExperimentalFuntion {
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner (System.in);
+        System.out.println("Please, enter the value of x to begin");
+        int xValue = input.nextInt();
+        double 2ndNumerator = restFactorial(xValue)
+        double 1rstNumerator = calculateExpresion(Xvalue)
+        System.out.println("Funtion's result is"+ result);
+public static int restFactorial(int x) {
+    // Calculate the x's factorial
+    int factorialX = 1;
+    for (int i = 1; i <= x; i++) {
+        factorialX *= i;
+    }
 
-        System.out.println("Please enter the value of X to begin:");
-        double X = input.nextDouble();
+    // Calculate the factorial of 10
+    int factorial10 = 1;
+    for (int i = 1; i <= 10; i++) {
+        factorial10 *= i;
+    }
 
-        double resultado = calculateExpression(X);
+    // Rest the factorials 
+    return factorialX - factorial10;
+}
 
-        System.out.println("Function's result is: " + resultado);
-
-        input.close();
     }
 
     // Function to calculate the fourth root of the sixth power of a product of two
