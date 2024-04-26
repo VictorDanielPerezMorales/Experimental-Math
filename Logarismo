@@ -1,9 +1,0 @@
-public class Logarismo {
-    public static void main(String[]args){  
-    double result = logarithmBase10(0.16);
-    System.out.println(result);
-}
-    public static double logarithmBase10(double n) {
-    return Math.log10(0.16);
-}
-}
