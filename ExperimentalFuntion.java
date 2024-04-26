@@ -3,31 +3,17 @@ import java.util.Scanner;
 public class ExperimentalFuntion {
 
     public static void main(String[] args) {
-        Scanner input = new Scanner (System.in);
-        System.out.println("Please, enter the value of x to begin");
-        int xValue = input.nextInt();
-        double 2ndNumerator = restFactorial(xValue);
-        double 1rstNumerator = calculateExpresion(xValue);
-        double 2ndDenominator = logarithmBase10(xValue);
-        System.out.println("Funtion's result is"+ result);
-        
-public static int restFactorial(int x) {
-    // Calculate the x's factorial
-    int factorialX = 1;
-    for (int i = 1; i <= x; i++) {
-        factorialX *= i;
-    }
+        Scanner input = new Scanner(System.in);
 
-    // Calculate the factorial of 10
-    int factorial10 = 1;
-    for (int i = 1; i <= 10; i++) {
-        factorial10 *= i;
-    }
+        System.out.println("Please enter the value of X to begin:");
+        double X = input.nextDouble();
 
-    // Rest the factorials 
-    return factorialX - factorial10;
-}
+        double resultado = calculateExpression(X);
+        double result = calculateFractionPower(X);
 
+        System.out.println("Function's result is: " + resultado);
+        System.out.println("The result of (" + X + "/4)^(1/2) is: " + result);
+        input.close();
     }
 
     // Function to calculate the fourth root of the sixth power of a product of two
@@ -36,13 +22,18 @@ public static int restFactorial(int x) {
         double euler = Math.E; // Euler's constant (approximately 2.71828)
 
         // Calculate the expression
-
-
         double result = Math.pow(Math.pow(X * X * 4, 6), 1.0 / 4) + euler;
 
         return result;
-}
-    public static double logarithmBase10(double x) {
-    return Math.log10(0.16);
-}
+    }
+
+    public static double calculateFractionPower(double x) {
+        // Divide x by 4
+        double fraction = x / 4.0;
+
+        // Calculate the square root of the resulting fraction
+        double result = Math.sqrt(fraction);
+
+        return result;
+    }
 }
