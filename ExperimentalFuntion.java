@@ -1,10 +1,13 @@
 import java.util.Scanner;
+
 public class ExperimentalFuntion {
+
     public static void main(String[] args) {
         Scanner input = new Scanner (System.in);
         System.out.println("Please, enter the value of x to begin");
         int xValue = input.nextInt();
-        int result = restFactorial(xValue)
+        double 2ndNumerator = restFactorial(xValue)
+        double 1rstNumerator = calculateExpresion(Xvalue)
         System.out.println("Funtion's result is"+ result);
 public static int restFactorial(int x) {
     // Calculate the x's factorial
@@ -22,6 +25,17 @@ public static int restFactorial(int x) {
     // Rest the factorials 
     return factorialX - factorial10;
 }
+
     }
-    
+
+    // Function to calculate the fourth root of the sixth power of a product of two
+    // terms plus Euler's constant
+    public static double calculateExpression(double X) {
+        double euler = Math.E; // Euler's constant (approximately 2.71828)
+
+        // Calculate the expression
+        double result = Math.pow(Math.pow(X * X * 4, 6), 1.0 / 4) + euler;
+
+        return result;
+    }
 }
