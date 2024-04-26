@@ -6,9 +6,11 @@ public class ExperimentalFuntion {
         Scanner input = new Scanner (System.in);
         System.out.println("Please, enter the value of x to begin");
         int xValue = input.nextInt();
-        double 2ndNumerator = restFactorial(xValue)
-        double 1rstNumerator = calculateExpresion(Xvalue)
+        double 2ndNumerator = restFactorial(xValue);
+        double 1rstNumerator = calculateExpresion(xValue);
+        double 2ndDenominator = logarithmBase10(xValue);
         System.out.println("Funtion's result is"+ result);
+        
 public static int restFactorial(int x) {
     // Calculate the x's factorial
     int factorialX = 1;
@@ -34,8 +36,13 @@ public static int restFactorial(int x) {
         double euler = Math.E; // Euler's constant (approximately 2.71828)
 
         // Calculate the expression
+
+
         double result = Math.pow(Math.pow(X * X * 4, 6), 1.0 / 4) + euler;
 
         return result;
-    }
+}
+    public static double logarithmBase10(double x) {
+    return Math.log10(0.16);
+}
 }
