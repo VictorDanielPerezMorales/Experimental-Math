@@ -6,9 +6,11 @@ public class ExperimentalFuntion {
         Scanner input = new Scanner (System.in);
         System.out.println("Please, enter the value of x to begin");
         int xValue = input.nextInt();
-        double 2ndNumerator = restFactorial(xValue);
-        double 1rstNumerator = calculateExpresion(xValue);
-        double 2ndDenominator = logarithmBase10(xValue);
+        double secondNumerator = restFactorial(xValue);
+        double firstNumerator = calculateExpresion(xValue);
+        double secondDenominator = logarithmBase10(xValue);
+        double firstDenominator = raizcuadrada(xValue);
+        double result = ( firstNumerator / firstDenominator * secondNumerator / secondDenominator )^3;
         System.out.println("Funtion's result is"+ result);
         
 public static int restFactorial(int x) {
@@ -41,6 +43,9 @@ public static int restFactorial(int x) {
         double result = Math.pow(Math.pow(X * X * 4, 6), 1.0 / 4) + euler;
 
         return result;
+}
+    public static double raizCuarta(double x) {
+       return Math.pow(x, 1.0 / 4.0);
 }
     public static double logarithmBase10(double x) {
     return Math.log10(0.16);
