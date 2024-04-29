@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class calculate1stDenominator{
+				public static void main(String[]args){
+								Scanner X= new Scanner(System.in);
+								System.out.println("Give value to x");
+								double x = X.nextDouble();
+								double result=sqrt(x);
+								System.out.println("The result is"+ result);
+								X.close();
+				}
+				public static double sqrt(double x){
+								double result=Math.sqrt(x/4);
+								return result;
+				}
+				}
